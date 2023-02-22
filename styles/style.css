@@ -1,0 +1,602 @@
+*{
+    /* siempre hay que hacer nuestro propio reseteo */
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root {
+    /* --New-Swatch: #33050A;lo utilice para algunos titulos */
+    /* --New-Swatch: #66141E;este color lo utilice para el nav */
+    --New-Swatch: #992E3A;
+    --New-Swatch: #CC5260;
+    --New-Swatch: #FF808E;
+  }
+  
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: #66141E;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px 10px 60px;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0px; 
+
+    z-index: 1;
+}
+
+.abrir-menu,
+.cerrar-menu{
+    display: none;
+}
+
+
+.navitems.active a, .navitems a:hover{
+    text-decoration: underline;
+}
+
+
+.textoheader{
+    color: white;
+}
+
+.logo{
+    display: flex;
+    align-items: center; 
+}
+
+.logo img{
+    height: 50px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    font-weight: 600;
+}
+
+li{
+    padding-right: 20px;
+    
+}
+
+nav a:hover{
+    color: white;
+}
+
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+/*Hasta aqui fue el estilo del header de tosas las paginas*/
+
+
+.imagen-main{
+    width: 100%;
+    background-image: cover;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.frase{
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fraseautor{
+    font-size: 1.8rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+    margin-bottom: 20px
+}
+
+.pregunta-div-index{
+    margin: 50px 20px 50px 20px;
+}
+
+.pregunta-index{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 100px;
+    color: #992E3A;
+}
+
+.pregunta-index-titulo{
+    font-size: 7rem;
+    margin-left: 100px;
+    color: #33050A;
+}
+
+.pregunta-index-parrafo{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 10px 0 10px 100px;
+}
+
+.pregunta-index-subtitulo{
+    font-size: 1.5rem;
+    margin: 10px 0 10px 100px;
+    font-style: italic;
+    font-weight: bold;
+    color: #33050A;
+}
+
+/* COMIENZO DE LA PAGINA DE NOSOTROS*/
+
+/* este codigo de caja 1 tambien se utilizo para otras paginas */
+.caja1{
+    /* box modelling */
+    /* background-color: aqua; */
+    padding: 10px;
+    margin: 15px;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caja1 h3{
+    font-size: 1.5rem;
+    color: #992E3A;
+}
+
+.caja1 h1{
+    font-size: 3rem;
+    color: #33050A;
+    text-align: center;
+}
+
+.segundacaja{
+    /* background-color: aqua; */
+    padding: 10px;
+    margin-block: 50px;
+    height: 300px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.segundacaja p{
+    /* background-color: #33050A; */
+    display: flex;
+    align-items: center;
+
+    text-align: justify;
+    width:50%;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.slide{
+    /* background-color: #33050a; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+}
+
+.carousel-inner{
+    width: 40%;
+}
+
+.terceracaja{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 300px;
+    
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.terceracaja__caja{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.terceracaja__caja h3{
+    font-size: 1.5rem;
+    color: #992E3A;
+    /* background-color: #33050A */
+}
+
+.terceracaja__caja h2{
+    font-size: 3rem;
+    color: #33050A ;
+    /* background-color: antiquewhite; */
+}
+
+.terceracaja__caja p{
+    margin-top: 20px;
+    /* background-color: blue; */
+    font-size: 1.5rem;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    text-align:left;
+}
+/* Cards de la pagina NOSOTROS */
+
+.cartas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    /* background-color: red; */
+    margin-block: 50px;
+}
+
+.carta{
+    width: 20%;
+    /* background-color: red; */
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-inline: 1.5%;
+    margin-block: 20px;
+    border: 2px double #66141E ;
+    overflow: auto;
+}
+
+.carta__imagen{
+    width: 100%;
+    border-radius: 10PX;
+}
+
+.carta__titulo{
+    font-size: 1.1rem;
+    text-align: center;
+    color: #66141E;
+}
+
+.carta__parrafo{
+    font-size: 0.99rem;
+    text-align: justify;
+}
+
+.carta__boton{
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #FF808E;
+}
+
+.carta__imagen, .carta__titulo, .carta__parrafo{
+    margin-bottom: 10px;
+}
+
+/* cuadro de las listas de reproducción */
+
+.musica{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-block: 100px;
+    
+}
+
+.musica__listas{
+    display: flex;
+    flex-direction: column;
+    
+    /* background-color: #66141E; */
+    margin-left: 50px;
+    height: 150px;
+}
+
+.musica__listas iframe{
+    border-radius: 10px;
+}
+.musica__titulo{
+    /* background-color: aqua; */
+    margin-right: 50px;
+    padding: 10px;
+    width: 40%;
+    font-size: 4rem;
+    text-align: center;
+    color: #992E3A;
+
+    display: flex;
+    align-items: center;
+}
+
+/* AQUI TERMINA PAGINA DE NOSOTROS */
+
+/* AQUI EMPIEZA PAGINA DE UBICACIÓN */
+
+.textoubicacion{
+    /* background-color: red; */
+    margin: 10px;
+    height: 100px;
+    font-size:1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mapa{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+}
+
+.mapa  iframe{
+    border-radius: 100px;
+}
+
+/* AQUI INICIA PAGINA DE PREGUNTAS FRECUENTES */
+
+.preguntas{
+    /* background-color: red; */
+    width: 100%;
+    height: 1000px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.preguntasnumero{
+    /* background-color: aqua; */
+    height: 150px;
+    /* border: 1px solid #992E3A; */
+    background-color: #66141E;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AQUI INICIA PAGINA DE CONTACTO */
+
+.contenedor{
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.contenedor_izq{
+    /* background-color: yellow; */
+    margin: 40px;
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenedor_izq_texto{
+    text-align: center;
+    font-size: 3rem;
+    color: #33050A;
+    margin-bottom: 10px;
+}
+
+.contenedor_izq_texto h2{
+    padding-top: 5px;
+    color: #992E3A;
+}
+
+.links{
+    color: black;
+    font-size: 1.2rem;
+    margin-inline: 20px;
+}
+
+.contenedor_der{
+    /* background-color: violet; */
+    margin: 20px;
+    width: 40%;
+}
+
+.formcaja{
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs{
+    color: white;
+    background-color: #992E3A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*A partir de aqui inica el footer*/
+
+.logoW{
+    /* este es el boton de whatsapp en la esquina inferior derecha */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+.iconos{
+    text-align: center;
+    margin: 20px;
+}
+.iconos a{
+    color: black;
+}
+
+
+.texto-footer{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.imagenesfooter{
+    margin: 20px;
+    display: flex;
+    justify-content: center; 
+}
+
+
+.copyright{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+/*Aqui termina el footer*/
+
+
+@media screen and (max-width: 480px){
+
+    /* INICIO DE LOS AJUSTES AL HEADER */
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #33050A;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);  
+    }
+
+    nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    ul{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo-nombre{
+        font-size: 1em;
+    }
+
+        /* FIN DE LOS AJUSTES AL HEADER */
+
+        /* INICIO DE LOS AJUSTES AL MAIN DEL INDEX*/
+    .frase{
+        font-size: 1rem;
+    }
+
+    .fraseautor{
+        font-size: 0.8rem;
+    }
+
+    .pregunta-div-index{
+        margin: 20px 8px 20px 8px;
+    }
+
+    .pregunta-index{
+        font-size: 1rem;
+        margin-left: 40px;
+    }
+
+    .pregunta-index-titulo{
+        font-size: 3rem;
+        margin-left: 40px;
+    }
+    
+    .pregunta-index-parrafo{
+        font-size: 0.8rem;
+        margin-left: 40px;
+    }
+
+    .pregunta-index-subtitulo{
+        font-size: 0.8rem;
+        margin-left: 40px;
+    }s
+    /* FIN DE LOS AJUSTES DEL MAIN DEL INDEX */
+
+    /* Ajustes de la caja 1, donde esta el titulo principal de todas las paginas */
+
+    .caja1 h3{
+        font-size: 0.8rem;
+    }
+
+    .caja1 h1{
+        font-size: 1.5rem;
+    }
+
+    /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
+    
+    .textoubicacion{
+        font-size: 0.8rem;
+    }
+
+    .mapa iframe{
+        width: 50%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    /* INICIO DE LOS AJUSTES DE TODOS LOS FOOTER */
+
+    .texto-footer{
+        font-size: 0.8rem;
+    }
+
+    .imagenesfooter img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
