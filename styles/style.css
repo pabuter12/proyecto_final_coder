@@ -585,6 +585,38 @@ nav a:hover{
         border-radius: 30px;
     }
 
+    /* INICIO DE LOS AJUSTES DE PREGUNTAS FRECUENTES */
+    
+    .preguntasnumero h2{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* INICIO DE LOS AJUSTES DE CONTACTO */
+
+    .contenedor{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .contenedor_izq_texto{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .links{
+        font-size: 1rem;
+        margin-inline: 5px;
+    }
+
+    .formcaja{
+        padding-block: 15px;
+    }
+
     /* INICIO DE LOS AJUSTES DE TODOS LOS FOOTER */
 
     .texto-footer{
