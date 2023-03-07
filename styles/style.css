@@ -29,6 +29,7 @@ header{
     top: 0px; 
 
     z-index: 1;
+    border-bottom: white 1px solid;
 }
 
 .abrir-menu,
@@ -363,10 +364,61 @@ nav a:hover{
     /* border: 1px solid #992E3A; */
     background-color: #66141E;
     color: white;
+    border-radius: 20px;
+    font-size: 1.5rem;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;  
+    text-align: center;
+}
+
+.preguntasnumero1::before{
+    content: "¿Las mujeres pueden entrenar calistenia?";
+    position: absolute;
+}
+
+.preguntasnumero1::after{
+    content: "Todas las personas pueden entrenar Calistenia sin importar su sexo.";
+    opacity: 0;
+}
+
+.preguntasnumero2::before{
+    content: "Si nunca he hecho ejercicio. ¿Puedo entrenar calistenia?";
+    position: absolute;
+}
+
+.preguntasnumero2::after{
+    content: "Los entrenamientos de calistenia son aptos para todas las personas. Estos entrenamientos empiezan con ejercicios faciles y poco a poco se aumenta la dificultad.";
+    opacity: 0;
+}
+
+.preguntasnumero3::before{
+    content: "¿Se puede empezar calistenia si se tiene sobrepeso?";
+    position: absolute;
+}
+
+.preguntasnumero3::after{
+    content: "FALTA LA RESPUESTA";
+    opacity: 0;
+}
+
+.preguntasnumero4::before{
+    content: "¿Debo usar guantes para entrenar esta discipina?";
+    position: absolute;
+}
+
+.preguntasnumero4::after{
+    content: "FALTA LA RESPUESTA";
+    opacity: 0;
+}
+
+.preguntasnumero:hover::before{
+    opacity: 0;
+}
+
+.preguntasnumero:hover::after{
+    opacity: 1;
 }
 
 /* AQUI INICIA PAGINA DE CONTACTO */
@@ -420,24 +472,6 @@ nav a:hover{
     color: white;
     background-color: #992E3A;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*A partir de aqui inica el footer*/
@@ -573,6 +607,59 @@ nav a:hover{
         font-size: 1.5rem;
     }
 
+    /* INICIO DE LOS AJUSTES DE LA PAGINA NOSOTROS */
+
+    .segundacaja{
+        margin: 0 0 50px 0;
+        height: 200px;
+    }
+
+
+    .segundacaja p{
+        font-size: 0.8rem;
+        margin-inline-start: 40px;
+        
+    }
+
+    .slide{
+        width: 240px;
+        align-items: center;
+    }
+
+    .terceracaja__caja{
+        margin-left: 40px;
+        padding-left: 10px;
+    }
+
+    .terceracaja__caja h3{
+        font-size: 0.8rem;
+    }
+
+    .terceracaja__caja h2{
+        font-size: 1rem;
+    }
+
+    .terceracaja__caja p{
+        font-size: 0.8rem;
+        text-align: justify;
+        width: 164px;
+    }
+
+    .terceracaja img{
+        width: 80px;
+        height: 90px;
+    }
+
+    .terceracaja{
+        align-items: center;
+    }
+
+
+
+
+
+
+
     /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
     
     .textoubicacion{
@@ -587,9 +674,10 @@ nav a:hover{
 
     /* INICIO DE LOS AJUSTES DE PREGUNTAS FRECUENTES */
     
-    .preguntasnumero h2{
+    .preguntasnumero{
         font-size: 0.8rem;
         text-align: center;
+        font-weight: bold;
     }
 
     /* INICIO DE LOS AJUSTES DE CONTACTO */
