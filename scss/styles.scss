@@ -1,10 +1,6 @@
-*{
-    /* siempre hay que hacer nuestro propio reseteo */
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+@import "./partials/variables";
+
+@import "./partials/reset";
 
 :root {
     /* --New-Swatch: #33050A;lo utilice para algunos titulos */
@@ -13,74 +9,8 @@
     --New-Swatch: #CC5260;
     --New-Swatch: #FF808E;
 }
-  
-a{
-    text-decoration: none;
-}
 
-header{
-    display: flex;
-    min-height: 70px;
-    background-color: #66141E;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 60px 10px 60px;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0px; 
-
-    z-index: 1;
-    border-bottom: white 1px solid;
-}
-
-.abrir-menu,
-.cerrar-menu{
-    display: none;
-}
-
-.logo{
-    display: flex;
-    align-items: center; 
-}
-
-.textoheader{
-    color: white;
-}
-
-.logo img{
-    height: 50px;
-}
-
-ul{
-    list-style-type: none;
-    display: flex;
-    font-weight: 600;
-}
-
-li{
-    padding-right: 20px;
-    
-}
-
-.navitems.active a, .navitems a:hover{
-    text-decoration: underline;
-}
-
-nav a:hover{
-    color: white;
-}
-
-@media (max-width: 700px){
-    header{
-        flex-direction: column;
-    }
-    nav{
-        padding: 10px 0px;
-    }
-}
-
-/*Hasta aqui fue el estilo del header de tosas las paginas*/
-
+@import "./partials/header";
 
 .imagen-main{
     width: 100%;
@@ -112,13 +42,13 @@ nav a:hover{
     font-size: 2rem;
     font-weight: bold;
     margin-left: 100px;
-    color: #992E3A;
+    color: $colortexto2;
 }
 
 .pregunta-index-titulo{
     font-size: 7rem;
     margin-left: 100px;
-    color: #33050A;
+    color: $colortexto3;
 }
 
 .pregunta-index-parrafo{
@@ -132,7 +62,7 @@ nav a:hover{
     margin: 10px 0 10px 100px;
     font-style: italic;
     font-weight: bold;
-    color: #33050A;
+    color: $colortexto3;
 }
 
 /* COMIENZO DE LA PAGINA DE NOSOTROS*/
@@ -152,12 +82,12 @@ nav a:hover{
 
 .caja1 h3{
     font-size: 1.5rem;
-    color: #992E3A;
+    color: $colortexto2;
 }
 
 .caja1 h1{
     font-size: 3rem;
-    color: #33050A;
+    color: $colortexto3;
     text-align: center;
 }
 
@@ -214,13 +144,13 @@ nav a:hover{
 
 .terceracaja__caja h3{
     font-size: 1.5rem;
-    color: #992E3A;
+    color: $colortexto2;
     /* background-color: #33050A */
 }
 
 .terceracaja__caja h2{
     font-size: 3rem;
-    color: #33050A ;
+    color: $colortexto3 ;
     /* background-color: antiquewhite; */
 }
 
@@ -252,7 +182,7 @@ nav a:hover{
     display: inline-block;
     margin-inline: 1.5%;
     margin-block: 20px;
-    border: 2px double #66141E ;
+    border: 2px double $colortexto1 ;
     overflow: auto;
 }
 
@@ -264,7 +194,7 @@ nav a:hover{
 .carta__titulo{
     font-size: 1.1rem;
     text-align: center;
-    color: #66141E;
+    color: $colortexto1;
 }
 
 .carta__parrafo{
@@ -313,7 +243,7 @@ nav a:hover{
     width: 40%;
     font-size: 4rem;
     text-align: center;
-    color: #992E3A;
+    color: $colortexto2;
 
     display: flex;
     align-items: center;
@@ -361,7 +291,7 @@ nav a:hover{
     /* background-color: aqua; */
     height: 150px;
     /* border: 1px solid #992E3A; */
-    background-color: #66141E;
+    background-color: $colortexto1;
     color: white;
     border-radius: 20px;
     font-size: 1.5rem;
@@ -440,13 +370,13 @@ nav a:hover{
 .contenedor_izq_texto{
     text-align: center;
     font-size: 3rem;
-    color: #33050A;
+    color: $colortexto3;
     margin-bottom: 10px;
 }
 
 .contenedor_izq_texto h2{
     padding-top: 5px;
-    color: #992E3A;
+    color: $colortexto2;
 }
 
 .links{
@@ -469,253 +399,9 @@ nav a:hover{
 
 .inputs{
     color: white;
-    background-color: #992E3A;
+    background-color: $colortexto2;
 }
 
+@import "./partials/footer";
 
-/*A partir de aqui inica el footer*/
-
-.logoW{
-    /* este es el boton de whatsapp en la esquina inferior derecha */
-    position: fixed;
-    bottom: 0;
-    right: 0;
-}
-
-
-.iconos{
-    text-align: center;
-    margin: 20px;
-}
-.iconos a{
-    color: black;
-}
-
-
-.texto-footer{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.imagenesfooter{
-    margin: 20px;
-    display: flex;
-    justify-content: center; 
-}
-
-
-.copyright{
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-
-
-/*Aqui termina el footer*/
-
-
-@media screen and (max-width: 480px){
-
-    /* INICIO DE LOS AJUSTES AL HEADER */
-    .abrir-menu,
-    .cerrar-menu{
-        display: block;
-        cursor: pointer;
-    }
-
-    nav{
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #33050A;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);  
-    }
-
-    nav.visible{
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    ul{
-        flex-direction: column;
-        align-items: end;
-    }
-
-    header{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-
-    .logo-nombre{
-        font-size: 1em;
-    }
-
-        /* FIN DE LOS AJUSTES AL HEADER */
-
-        /* INICIO DE LOS AJUSTES AL MAIN DEL INDEX*/
-    .frase{
-        font-size: 1rem;
-    }
-
-    .fraseautor{
-        font-size: 0.8rem;
-    }
-
-    .pregunta-div-index{
-        margin: 20px 8px 20px 8px;
-    }
-
-    .pregunta-index{
-        font-size: 1rem;
-        margin-left: 40px;
-    }
-
-    .pregunta-index-titulo{
-        font-size: 3rem;
-        margin-left: 40px;
-    }
-    
-    .pregunta-index-parrafo{
-        font-size: 0.8rem;
-        margin-left: 40px;
-    }
-
-    .pregunta-index-subtitulo{
-        font-size: 0.8rem;
-        margin-left: 40px;
-    }s
-    /* FIN DE LOS AJUSTES DEL MAIN DEL INDEX */
-
-    /* Ajustes de la caja 1, donde esta el titulo principal de todas las paginas */
-
-    .caja1 h3{
-        font-size: 0.8rem;
-    }
-
-    .caja1 h1{
-        font-size: 1.5rem;
-    }
-
-    /* INICIO DE LOS AJUSTES DE LA PAGINA NOSOTROS */
-
-    .segundacaja{
-        margin: 0 0 50px 0;
-        height: 200px;
-    }
-
-
-    .segundacaja p{
-        font-size: 0.8rem;
-        margin-inline-start: 40px;
-        
-    }
-
-    .slide{
-        width: 240px;
-        align-items: center;
-    }
-
-    .terceracaja__caja{
-        margin-left: 40px;
-        padding-left: 10px;
-    }
-
-    .terceracaja__caja h3{
-        font-size: 0.8rem;
-    }
-
-    .terceracaja__caja h2{
-        font-size: 1rem;
-    }
-
-    .terceracaja__caja p{
-        font-size: 0.8rem;
-        text-align: justify;
-        width: 164px;
-    }
-
-    .terceracaja img{
-        width: 80px;
-        height: 90px;
-    }
-
-    .terceracaja{
-        align-items: center;
-    }
-
-
-
-
-
-
-
-    /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
-    
-    .textoubicacion{
-        font-size: 0.8rem;
-    }
-
-    .mapa iframe{
-        width: 50%;
-        height: 100%;
-        border-radius: 30px;
-    }
-
-    /* INICIO DE LOS AJUSTES DE PREGUNTAS FRECUENTES */
-    
-    .preguntasnumero{
-        font-size: 0.8rem;
-        text-align: center;
-        font-weight: bold;
-    }
-
-    /* INICIO DE LOS AJUSTES DE CONTACTO */
-
-    .contenedor{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-
-    .contenedor_izq_texto{
-        font-size: 1rem;
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .links{
-        font-size: 1rem;
-        margin-inline: 5px;
-    }
-
-    .formcaja{
-        padding-block: 15px;
-    }
-
-    /* INICIO DE LOS AJUSTES DE TODOS LOS FOOTER */
-
-    .texto-footer{
-        font-size: 0.8rem;
-    }
-
-    .imagenesfooter img{
-        width: 50px;
-        height: 50px;
-    }
-
-    .copyright{
-        font-size: 0.8rem;
-    }
-}
+@import "./partials/mediaqueries";

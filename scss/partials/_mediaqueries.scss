@@ -1,0 +1,205 @@
+
+@media screen and (max-width: 480px){
+
+    /* INICIO DE LOS AJUSTES AL HEADER */
+    .abrir-menu,
+    .cerrar-menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #33050A;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);  
+    }
+
+    nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    ul{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .logo-nombre{
+        font-size: 1em;
+    }
+
+        /* FIN DE LOS AJUSTES AL HEADER */
+
+        /* INICIO DE LOS AJUSTES AL MAIN DEL INDEX*/
+    .frase{
+        font-size: 1rem;
+    }
+
+    .fraseautor{
+        font-size: 0.8rem;
+    }
+
+    .pregunta-div-index{
+        margin: 20px 8px 20px 8px;
+    }
+
+    .pregunta-index{
+        font-size: 1rem;
+        margin-left: 40px;
+    }
+
+    .pregunta-index-titulo{
+        font-size: 3rem;
+        margin-left: 40px;
+    }
+    
+    .pregunta-index-parrafo{
+        font-size: 0.8rem;
+        margin-left: 40px;
+    }
+
+    .pregunta-index-subtitulo{
+        font-size: 0.8rem;
+        margin-left: 40px;
+    }s
+    /* FIN DE LOS AJUSTES DEL MAIN DEL INDEX */
+
+    /* Ajustes de la caja 1, donde esta el titulo principal de todas las paginas */
+
+    .caja1 h3{
+        font-size: 0.8rem;
+    }
+
+    .caja1 h1{
+        font-size: 1.5rem;
+    }
+
+    /* INICIO DE LOS AJUSTES DE LA PAGINA NOSOTROS */
+
+    .segundacaja{
+        margin: 0 0 50px 0;
+        height: 200px;
+    }
+
+
+    .segundacaja p{
+        font-size: 0.8rem;
+        margin-inline-start: 40px;
+        
+    }
+
+    .slide{
+        width: 240px;
+        align-items: center;
+    }
+
+    .terceracaja__caja{
+        margin-left: 40px;
+        padding-left: 10px;
+    }
+
+    .terceracaja__caja h3{
+        font-size: 0.8rem;
+    }
+
+    .terceracaja__caja h2{
+        font-size: 1rem;
+    }
+
+    .terceracaja__caja p{
+        font-size: 0.8rem;
+        text-align: justify;
+        width: 164px;
+    }
+
+    .terceracaja img{
+        width: 80px;
+        height: 90px;
+    }
+
+    .terceracaja{
+        align-items: center;
+    }
+
+
+
+
+
+
+
+    /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
+    
+    .textoubicacion{
+        font-size: 0.8rem;
+    }
+
+    .mapa iframe{
+        width: 50%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    /* INICIO DE LOS AJUSTES DE PREGUNTAS FRECUENTES */
+    
+    .preguntasnumero{
+        font-size: 0.8rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* INICIO DE LOS AJUSTES DE CONTACTO */
+
+    .contenedor{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .contenedor_izq_texto{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .links{
+        font-size: 1rem;
+        margin-inline: 5px;
+    }
+
+    .formcaja{
+        padding-block: 15px;
+    }
+
+    /* INICIO DE LOS AJUSTES DE TODOS LOS FOOTER */
+
+    .texto-footer{
+        font-size: 0.8rem;
+    }
+
+    .imagenesfooter img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+    }
+}
