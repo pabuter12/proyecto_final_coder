@@ -16,9 +16,8 @@
 
 
 .texto-footer{
-    text-align: center;
-    font-size: 1.5rem;
     margin-bottom: 20px;
+    @extend .copyright
 }
 
 .imagenesfooter{
@@ -31,4 +30,8 @@
 .copyright{
     text-align: center;
     font-size: 1.5rem;
+}
+
+*{
+    font-family: sans-serif;
 }

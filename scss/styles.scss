@@ -12,6 +12,7 @@
 
 @import "./partials/header";
 
+// Imagen de todos las paginas
 .imagen-main{
     width: 100%;
     background-image: cover;
@@ -19,9 +20,17 @@
     border-radius: 30px;
 }
 
+// Maps para frente de Inicio
+
+$mainInicio: (
+    preguntasize: 2rem,
+    titulosize: 7rem,
+    parrafosize: 1.5rem,
+);
+
 .frase{
     margin: 20px;
-    font-size: 2rem;
+    font-size: map-get($map: $mainInicio, $key:preguntasize);
     font-weight: bold;
     text-align: center;
 }
@@ -39,27 +48,26 @@
 }
 
 .pregunta-index{
-    font-size: 2rem;
+    font-size: map-get($map: $mainInicio, $key: preguntasize);
     font-weight: bold;
     margin-left: 100px;
     color: $colortexto2;
 }
 
 .pregunta-index-titulo{
-    font-size: 7rem;
-    margin-left: 100px;
+    @extend .pregunta-index;
+    font-size: map-get($map: $mainInicio, $key: titulosize);
     color: $colortexto3;
 }
 
 .pregunta-index-parrafo{
-    font-size: 1.5rem;
+    font-size: map-get($map: $mainInicio, $key: parrafosize);
     font-weight: lighter;
     margin: 10px 0 10px 100px;
 }
 
 .pregunta-index-subtitulo{
-    font-size: 1.5rem;
-    margin: 10px 0 10px 100px;
+    @extend .pregunta-index-parrafo;
     font-style: italic;
     font-weight: bold;
     color: $colortexto3;
@@ -68,6 +76,13 @@
 /* COMIENZO DE LA PAGINA DE NOSOTROS*/
 
 /* este codigo de caja 1 tambien se utilizo para otras paginas */
+
+// Maps para los titulos de caja 1, que son los titulos principales de cada pg
+$maintittlesize: (
+    bigtittle: 3rem,
+    smalltittle: 1.5rem,
+);
+
 .caja1{
     /* box modelling */
     /* background-color: aqua; */
@@ -81,12 +96,12 @@
 }
 
 .caja1 h3{
-    font-size: 1.5rem;
-    color: $colortexto2;
+    font-size: map-get($map: $maintittlesize, $key: smalltittle);
+    color: $colortexto2; 
 }
 
 .caja1 h1{
-    font-size: 3rem;
+    font-size: map-get($map: $maintittlesize, $key: bigtittle);
     color: $colortexto3;
     text-align: center;
 }
@@ -114,6 +129,7 @@
     font-size: 1.5rem;
 }
 
+
 .slide{
     /* background-color: #33050a; */
     display: flex;
@@ -122,8 +138,9 @@
   
 }
 
+
 .carousel-inner{
-    width: 40%;
+    width: 400px;
 }
 
 .terceracaja{
@@ -161,8 +178,9 @@
     height: 200px;
     display: flex;
     align-items: center;
-    text-align:left;
+    text-align:justify;
 }
+
 /* Cards de la pagina NOSOTROS */
 
 .cartas{
@@ -189,6 +207,8 @@
 .carta__imagen{
     width: 100%;
     border-radius: 10PX;
+    @extend .iframe_youtube
+    
 }
 
 .carta__titulo{
@@ -200,6 +220,7 @@
 .carta__parrafo{
     font-size: 0.99rem;
     text-align: justify;
+    height: 143px;
 }
 
 .carta__boton{
@@ -227,7 +248,6 @@
 .musica__listas{
     display: flex;
     flex-direction: column;
-    
     /* background-color: #66141E; */
     margin-left: 50px;
     height: 150px;
@@ -236,6 +256,11 @@
 .musica__listas iframe{
     border-radius: 10px;
 }
+
+.iframe_youtube, .mapaa{
+    box-shadow: 0px 0px 12px black;
+}
+
 .musica__titulo{
     /* background-color: aqua; */
     margin-right: 50px;
@@ -328,7 +353,7 @@
 }
 
 .preguntasnumero3::after{
-    content: "FALTA LA RESPUESTA";
+    content: "No quiere decir que no puedes realizar calistenia, hay otras variantes y ejecicios que se pueden realziar segun tu salud y estado fisico.";
     opacity: 0;
 }
 
@@ -338,7 +363,7 @@
 }
 
 .preguntasnumero4::after{
-    content: "FALTA LA RESPUESTA";
+    content: "La decisión si usar o no guantes depende completamente del atleta. No es obligación";
     opacity: 0;
 }
 
@@ -353,6 +378,7 @@
 /* AQUI INICIA PAGINA DE CONTACTO */
 
 .contenedor{
+    margin-block: 60px;
     display: flex;
     /* background-color: aqua; */
 }

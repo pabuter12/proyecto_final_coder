@@ -104,6 +104,10 @@
         
     }
 
+    .carousel-inner{
+        width: 150px;
+    }
+
     .slide{
         width: 240px;
         align-items: center;
@@ -129,15 +133,47 @@
     }
 
     .terceracaja img{
-        width: 80px;
-        height: 90px;
+        width: 150px;
     }
 
     .terceracaja{
         align-items: center;
     }
 
+    /*Cards*/
 
+    .carta{
+        width: 25%;
+    }
+
+    .carta__titulo{
+        font-size: 0.8em;
+        height: 31px;
+    }
+
+    .carta__parrafo{
+        font-size: 0.7rem;
+        height: 195px;
+    }
+    
+    /*Lista de reproducción*/
+
+    .musica{
+       height: 250px;
+       margin-block: 50px;
+    }
+
+    .musica__titulo{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .musica__listas iframe{
+        width: 150px;
+    }
 
 
 

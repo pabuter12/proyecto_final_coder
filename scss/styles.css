@@ -103,7 +103,7 @@ nav a:hover {
   margin: 50px 20px 50px 20px;
 }
 
-.pregunta-index {
+.pregunta-index, .pregunta-index-titulo {
   font-size: 2rem;
   font-weight: bold;
   margin-left: 100px;
@@ -112,19 +112,16 @@ nav a:hover {
 
 .pregunta-index-titulo {
   font-size: 7rem;
-  margin-left: 100px;
   color: #33050A;
 }
 
-.pregunta-index-parrafo {
+.pregunta-index-parrafo, .pregunta-index-subtitulo {
   font-size: 1.5rem;
   font-weight: lighter;
   margin: 10px 0 10px 100px;
 }
 
 .pregunta-index-subtitulo {
-  font-size: 1.5rem;
-  margin: 10px 0 10px 100px;
   font-style: italic;
   font-weight: bold;
   color: #33050A;
@@ -183,7 +180,7 @@ nav a:hover {
 }
 
 .carousel-inner {
-  width: 40%;
+  width: 400px;
 }
 
 .terceracaja {
@@ -219,7 +216,7 @@ nav a:hover {
   height: 200px;
   display: flex;
   align-items: center;
-  text-align: left;
+  text-align: justify;
 }
 
 /* Cards de la pagina NOSOTROS */
@@ -257,6 +254,7 @@ nav a:hover {
 .carta__parrafo {
   font-size: 0.99rem;
   text-align: justify;
+  height: 143px;
 }
 
 .carta__boton {
@@ -288,6 +286,10 @@ nav a:hover {
 
 .musica__listas iframe {
   border-radius: 10px;
+}
+
+.iframe_youtube, .carta__imagen, .mapaa {
+  box-shadow: 0px 0px 12px black;
 }
 
 .musica__titulo {
@@ -375,7 +377,7 @@ nav a:hover {
 }
 
 .preguntasnumero3::after {
-  content: "FALTA LA RESPUESTA";
+  content: "No quiere decir que no puedes realizar calistenia, hay otras variantes y ejecicios que se pueden realziar segun tu salud y estado fisico.";
   opacity: 0;
 }
 
@@ -385,7 +387,7 @@ nav a:hover {
 }
 
 .preguntasnumero4::after {
-  content: "FALTA LA RESPUESTA";
+  content: "La decisión si usar o no guantes depende completamente del atleta. No es obligación";
   opacity: 0;
 }
 
@@ -399,6 +401,7 @@ nav a:hover {
 
 /* AQUI INICIA PAGINA DE CONTACTO */
 .contenedor {
+  margin-block: 60px;
   display: flex;
   /* background-color: aqua; */
 }
@@ -464,8 +467,6 @@ nav a:hover {
 }
 
 .texto-footer {
-  text-align: center;
-  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -475,9 +476,13 @@ nav a:hover {
   justify-content: center;
 }
 
-.copyright {
+.copyright, .texto-footer {
   text-align: center;
   font-size: 1.5rem;
+}
+
+* {
+  font-family: sans-serif;
 }
 
 @media screen and (max-width: 480px) {
@@ -529,7 +534,7 @@ nav a:hover {
   .pregunta-div-index {
     margin: 20px 8px 20px 8px;
   }
-  .pregunta-index {
+  .pregunta-index, .pregunta-index-titulo {
     font-size: 1rem;
     margin-left: 40px;
   }
@@ -537,7 +542,7 @@ nav a:hover {
     font-size: 3rem;
     margin-left: 40px;
   }
-  .pregunta-index-parrafo {
+  .pregunta-index-parrafo, .pregunta-index-subtitulo {
     font-size: 0.8rem;
     margin-left: 40px;
   }
@@ -561,6 +566,9 @@ nav a:hover {
     -webkit-margin-start: 40px;
             margin-inline-start: 40px;
   }
+  .carousel-inner {
+    width: 150px;
+  }
   .slide {
     width: 240px;
     align-items: center;
@@ -581,11 +589,37 @@ nav a:hover {
     width: 164px;
   }
   .terceracaja img {
-    width: 80px;
-    height: 90px;
+    width: 150px;
   }
   .terceracaja {
     align-items: center;
+  }
+  /*Cards*/
+  .carta {
+    width: 25%;
+  }
+  .carta__titulo {
+    font-size: 0.8em;
+    height: 31px;
+  }
+  .carta__parrafo {
+    font-size: 0.7rem;
+    height: 195px;
+  }
+  /*Lista de reproducción*/
+  .musica {
+    height: 250px;
+    margin-block: 50px;
+  }
+  .musica__titulo {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .musica__listas iframe {
+    width: 150px;
   }
   /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
   .textoubicacion {
@@ -628,7 +662,7 @@ nav a:hover {
     width: 50px;
     height: 50px;
   }
-  .copyright {
+  .copyright, .texto-footer {
     font-size: 0.8rem;
   }
 }/*# sourceMappingURL=styles.css.map */
