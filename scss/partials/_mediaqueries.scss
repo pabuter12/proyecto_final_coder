@@ -88,6 +88,7 @@
 
     .caja1 h1{
         font-size: 1.5rem;
+        margin-bottom: 40px;
     }
 
     /* INICIO DE LOS AJUSTES DE LA PAGINA NOSOTROS */
@@ -95,22 +96,27 @@
     .segundacaja{
         margin: 0 0 50px 0;
         height: 200px;
+
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
 
     .segundacaja p{
-        font-size: 0.8rem;
-        margin-inline-start: 40px;
-        
+        font-size: 0.8rem;    
+        width: 80%;
+        margin-bottom: 50px;
     }
 
     .carousel-inner{
-        width: 150px;
+        width: 300px;
     }
 
     .slide{
         width: 240px;
         align-items: center;
+        margin-block: 0px;
+        
     }
 
     .terceracaja__caja{
@@ -142,8 +148,12 @@
 
     /*Cards*/
 
+    .cartas{
+        margin-block: 20px; 
+    }
+
     .carta{
-        width: 25%;
+        width: 60%;
     }
 
     .carta__titulo{
@@ -154,6 +164,10 @@
     .carta__parrafo{
         font-size: 0.7rem;
         height: 195px;
+    }
+
+    .carta__boton{
+        font-size: 0.7rem;
     }
     
     /*Lista de reproducción*/
