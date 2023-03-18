@@ -620,6 +620,12 @@ nav a:hover {
   .musica {
     height: 250px;
     margin-block: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .musica__listas {
+    flex-direction: column-reverse;
+    margin: 0;
   }
   .musica__titulo {
     font-size: 1.5rem;
@@ -629,7 +635,8 @@ nav a:hover {
     margin-right: 0px;
   }
   .musica__listas iframe {
-    width: 150px;
+    width: 224px;
+    height: 80px;
   }
   /* INICIO DE LOS AJUSTES DEL MAIN DE LA UBICACIÓN */
   .textoubicacion {

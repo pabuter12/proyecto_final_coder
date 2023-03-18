@@ -175,6 +175,14 @@
     .musica{
        height: 250px;
        margin-block: 50px;
+
+       flex-direction: column;
+       align-items: center;
+    }
+
+    .musica__listas{
+        flex-direction: column-reverse;
+        margin: 0;
     }
 
     .musica__titulo{
@@ -186,7 +194,8 @@
     }
 
     .musica__listas iframe{
-        width: 150px;
+        width: 224px;
+        height: 80px;
     }
 
 
